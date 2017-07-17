@@ -1,0 +1,42 @@
+﻿@model MeetingsWebAPI.Models.Meet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Coffee.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coffee.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateMeet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateMeet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Decription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Decription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MeetId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
