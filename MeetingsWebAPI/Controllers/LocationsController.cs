@@ -21,6 +21,16 @@ namespace MeetingsWebAPI.Controllers
         {
             return db.Locations;
         }
+       // http://localhost:25487/api/Locations/LattLong/36.321/10.1718
+        [Route("api/Locations/LattLong/{lattitude}")]
+        [ResponseType(typeof (Location))]
+        public IHttpActionResult GetLocationByLattLong(int lattitude)
+        {
+            List<Location> locations =
+                db.Locations.Where(a => a.Lattitude == lattitude/* && a.Longitude == longitude*/).ToList();
+            return Ok(locations);
+        }
+
 
         // GET: api/Locations/5
         [ResponseType(typeof(Location))]

@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201707172244112_personmeet.Designer.cs">
       <DependentUpon>201707172244112_personmeet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707180857396_typeLocation.cs" />
+    <Compile Include="Migrations\201707180857396_typeLocation.Designer.cs">
+      <DependentUpon>201707180857396_typeLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Coffee.cs" />
     <Compile Include="Models\DBContext.cs" />
@@ -339,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707172244112_personmeet.resx">
       <DependentUpon>201707172244112_personmeet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707180857396_typeLocation.resx">
+      <DependentUpon>201707180857396_typeLocation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

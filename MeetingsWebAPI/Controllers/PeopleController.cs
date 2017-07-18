@@ -31,7 +31,14 @@ namespace MeetingsWebAPI.Controllers
             return Ok(persons);
         }
 
-
+        [Route("api/People/ByLocation/{lattitude}/{longitude}")]
+        [ResponseType(typeof (Person))]
+        public IHttpActionResult GetPersonByLocation(int lattitude, int longitude)
+        {
+            List<Person> persons =
+                db.People.Where(a => a.Location.Lattitude == lattitude && a.Location.Longitude == longitude).ToList();
+            return Ok(persons);
+        }
         // GET: api/People/5
         [ResponseType(typeof(Person))]
         public IHttpActionResult GetPerson(int id)
