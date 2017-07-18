@@ -22,6 +22,16 @@ namespace MeetingsWebAPI.Controllers
             return db.People;
         }
 
+        [Route("api/People/ByName/{name}")]
+        [ResponseType(typeof (Person))]
+        public IHttpActionResult GetPersonByName(string name)
+        {
+            //   List<Person> persons = db.People.Where(a => a.Name.ToUpper() == name.ToUpper()).ToList();
+            List<Person> persons = db.People.Where(a => a.Name.ToUpper().Contains(name.ToUpper()) ).ToList();
+            return Ok(persons);
+        }
+
+
         // GET: api/People/5
         [ResponseType(typeof(Person))]
         public IHttpActionResult GetPerson(int id)
